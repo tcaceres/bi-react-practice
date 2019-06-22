@@ -15,7 +15,7 @@ const PrivateRoute = props => {
         if (userId) {
           return <Component {...props} />
         } else {
-          return <Redirect to='/Login' />
+          return <Redirect to='/bi-react-practice/Login' />
         }
       }}
       {...rest}

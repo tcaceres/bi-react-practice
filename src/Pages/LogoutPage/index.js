@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 const LogoutPage = () => {
   localStorage.clear()
   return(
-    <Redirect to='/Login' />
+    <Redirect to='/bi-react-practice/Login' />
   )
 }
 
