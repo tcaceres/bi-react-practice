@@ -6,10 +6,10 @@ import {
 const MenuRM = () => {
     return(
       <div>
-        <Link to='/bi-react-practice/'>🏠 Rick And Morty | </Link>
-        <Link to='/bi-react-practice/CharactersList'>Characters | </Link>
-        <Link to='/bi-react-practice/EpisodesList'>Episodes | </Link>
-        <Link to='/bi-react-practice/CerrarSesion'>Cerrar Sesión</Link>        
+        <Link to='/'>🏠 Rick And Morty | </Link>
+        <Link to='/CharactersList'>Characters | </Link>
+        <Link to='/EpisodesList'>Episodes | </Link>
+        <Link to='/CerrarSesion'>Cerrar Sesión</Link>        
       </div>
     )
   }

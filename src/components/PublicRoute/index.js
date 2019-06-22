@@ -16,7 +16,7 @@ const PublicRoute = props => {
         if (!userId) {
           return <Component {...props} />
         } else {
-          return <Redirect to='/bi-react-practice/' />
+          return <Redirect to='/' />
         }
       }}
       {...rest}

@@ -3,6 +3,9 @@ const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 const LOGIN_FAIL = 'LOGIN_FAIL'
 const FAV_CHARACTERS = 'FAV_CHARACTERS'
 const FAV_EPISODES = 'FAV_EPISODES'
+const REGISTER_REQUEST = 'REGISTER_REQUEST'
+const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
+const REGISTER_FAIL = 'REGISTER_FAIL'
 
 export const loginSuccess = () =>({ type: LOGIN_SUCCESS })
 
@@ -28,6 +31,24 @@ export const setFavoritesEpisodes = (id, user) =>({
   payload: {
     id,
     user
+  }
+})
+
+export const registerRequest = () =>({ type: REGISTER_REQUEST })
+
+export const registerSuccess = (email, password, name) =>({ 
+  type: REGISTER_SUCCESS,
+  payload: {
+    email,
+    password,
+    name
+  } 
+})
+
+export const registerFail = error =>({
+  type: REGISTER_FAIL,
+  payload: {
+    error
   }
 })
 
@@ -136,6 +157,52 @@ export default (state = initialState, action) => {
         }        
       }
     }
-    default: return state
+    case REGISTER_REQUEST: {
+      return {
+        ...state,
+        loading: true,
+        error: null
+      }
+    }
+    case REGISTER_SUCCESS: {
+      const {
+        email,
+        password,
+        name
+      } = action.payload
+      
+      const newId = state.userList.length + 1
+
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        users: {
+          ...state.users,
+          [newId]: {
+            id: `${newId}`,
+            email,
+            password,
+            name,
+            favoritesCharacters: [],
+            favoritesEpisodes: []
+          }
+        }, 
+        userList: [...state.userList, `${newId}`]
+      }
+    }
+    case REGISTER_FAIL: {
+      const { error } = action.payload
+
+      return {
+        ...state,
+        loading: false,
+        error
+      }
+    }
+    default: {
+    }
   }
+
+  return state
 }

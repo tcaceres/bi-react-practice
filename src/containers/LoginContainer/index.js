@@ -20,7 +20,7 @@ const LoginContainer = props => {
     userList
   } = props
 
-  const fakeLogin = (email, password) => {  
+  const fakeLogin = (email, password) => {      
     const userId = userList.find(uId => {
       return (
         users[uId].email === email &&
@@ -36,6 +36,11 @@ const LoginContainer = props => {
 
   const login = ({ email, password }) => {
     loginRequest()
+
+    console.log('usuarios:')
+    console.log(users)
+    console.log('lista de usuarios:')
+    console.log(userList)
 
     const response = fakeLogin(email, password)
 
@@ -71,8 +76,8 @@ const LoginContainer = props => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input onChange={changeHandler} type="email" name="email" value={values["email"]} />
-      <input onChange={changeHandler} type="password" name="password" value={values["password"]} />
+      <input onChange={changeHandler} type="email" name="email" value={values["email"]} placeholder="email" />
+      <input onChange={changeHandler} type="password" name="password" value={values["password"]} placeholder="password" />
       {error}
       {!loading && <button type='submit'>Entrar</button>}
     </form>
