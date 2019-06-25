@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bi-react-practice/static/css/main.be0f1c08.chunk.css",
+    "main.js": "/bi-react-practice/static/js/main.f7ac37e9.chunk.js",
+    "main.js.map": "/bi-react-practice/static/js/main.f7ac37e9.chunk.js.map",
+    "runtime~main.js": "/bi-react-practice/static/js/runtime~main.52b4407c.js",
+    "runtime~main.js.map": "/bi-react-practice/static/js/runtime~main.52b4407c.js.map",
+    "static/js/2.1427ce24.chunk.js": "/bi-react-practice/static/js/2.1427ce24.chunk.js",
+    "static/js/2.1427ce24.chunk.js.map": "/bi-react-practice/static/js/2.1427ce24.chunk.js.map",
+    "index.html": "/bi-react-practice/index.html",
+    "precache-manifest.5b4b0309e78d8927426ff1347a57a288.js": "/bi-react-practice/precache-manifest.5b4b0309e78d8927426ff1347a57a288.js",
+    "service-worker.js": "/bi-react-practice/service-worker.js",
+    "static/css/main.be0f1c08.chunk.css.map": "/bi-react-practice/static/css/main.be0f1c08.chunk.css.map"
+  }
+}
